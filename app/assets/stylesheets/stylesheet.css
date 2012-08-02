@@ -1,0 +1,363 @@
+body, div,h1,h2,p,ul,li{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+@font-face { font-family: Headline; src: url('/fonts/Headline.TTF'); } 
+@font-face { font-family: HeadlineWideBold; src: url('/fonts/Headline-Wide-Bold.ttf'); } 
+@font-face { font-family: HeadlineWide; src: url('/fonts/Headline-Wide-Normal.ttf'); } 
+@font-face { font-family: Helvetica; src: url('/fonts/HelveticaLight.ttf'); } 
+@font-face { font-family: HelveticaLTSdBoldCond; src: url('/fonts/HelveticaLTStd-BoldCond.otf'); }
+@font-face { font-family: HelveticaLightItalic; src: url('/fonts/HelveticaLightItalic.ttf'); }
+@font-face { font-family: HelveticaBold; src: url('/fonts/HelveticaLTStd-Bold.otf'); }
+#header {
+  position: relative;
+  z-index: 10;
+  height: 205px;
+  width: 100%;
+  font-family: Headline, serif;
+  color: white;
+  background-color: #313131;
+  box-shadow: 0px 15px 30px #3F3F3F;
+}
+#pageHeader{
+  position: absolute;
+  z-index: 10;
+  height: 215px;
+  width: 980px;
+  border: 1px solid #313131;
+  background-color: #373737;
+}
+#logoPernix{
+  float: left;
+  margin: 15px 40px;
+}
+#telefonoLogin{
+  float:right;
+  width: 720px;
+  margin-right: 20px;
+  padding: 15px 0px 15px 20px;
+  border-bottom: solid 2px #404040;
+  font-size: 15px;
+  text-align: right;
+}
+#socialNet{
+  float:right;
+  margin: 10px 20px;
+}
+#socialNet div:last-child{
+  margin-right: 0px;
+}
+#socialNet div{
+  float:left;
+  width: 60px;
+  margin-right: 20px;
+  text-align: center;
+}
+#menuPrincipal{
+  float: left;
+  height: 60px;
+  width: 940px;
+  margin: -3px 20px;
+  background: url(/images/nav-background.png) repeat-x;
+}
+#menuPrincipal ul{
+  width: 887px;
+  margin: 20px auto;
+  list-style: none;
+}
+#menuPrincipal li{
+  float: left;
+  border-right: solid 2px white;
+}
+#menuPrincipal li:last-child {
+  border-right: none;
+}
+#menuPrincipal a{
+  padding: 5px 20px;
+  font-family: Headline, serif;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
+#submenuBusiness{
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 7px;
+}
+#submenuBusiness ul{
+  width: auto;
+  margin: 0px auto;
+}
+#submenuBusiness li{
+  float: none;
+  border: none;
+  margin: 0px 20px;
+  padding: 12px 0px;
+  overflow: hidden;
+  border-bottom: solid white 1px;
+}
+#submenuBusiness li:last-child{
+  border: none;
+}
+#submenuBusiness a{
+  padding: 0;
+  margin: 10px 0px;
+  font-size: 15px;
+}
+#flashBackground {
+  position: relative;
+  height: 115px;
+  width: 100%;
+  background-color: #3F88C2;
+}
+#homeBodyBackground {
+  position:relative;
+  //height: 800px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #E8E8E8;
+  background: url(/images/body-background.png);
+}
+#welcomePernix{
+  position: absolute;
+  bottom: -135px;
+  z-index: 10;
+  height: 170px;
+  width: 980px;
+  box-shadow: 0px 35px 30px #C1C1C1;
+  background: url(/images/welcomeSection.png) repeat-x;
+}
+
+#welcomePernix h1{
+  font-family: HeadlineWideBold, serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#welcomePernix p{
+  margin: 5px 0px;
+  font-family: Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #636363;
+}
+
+#welcomeTexto{
+  margin: 40px 50px;
+}
+
+#mainInformation{
+  position: relative;
+  height: 665px;
+  width: 980px;
+  margin: 135px auto 0px;
+}
+
+#infoBoxes{
+  overflow: hidden;
+  padding: 50px 39px;
+}
+.infoBox{
+  float:left;
+  height: 200px;
+  width: 288px;
+  margin-right: 19px;
+  background: url(/images/infoBox.png);
+}
+.lastInfoBox{
+  float:left;
+  height: 200px;
+  width: 288px;
+  background: url(/images/infoBox.png);
+}
+
+.infoBoxTextHeader{
+  margin: 13px 18px;
+  font-family: HelveticaLTSdBoldCond, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.infoBoxText {
+  margin: 14px 18px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+}
+#testimonials{
+  overflow: hidden;
+  margin: 0px 40px;
+}
+
+#testimonialsHeader{
+  font-family: HeadlineWide, serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #010101;
+}
+
+.testimonial{
+  float:left;
+  height: 200px;
+  width: 278px;
+  margin: 35px 30px 35px 0px;
+}
+.lastTestimonial{
+  float:left;
+  height: 200px;
+  width: 278px;
+  margin: 35px 0px;
+}
+.testimonialText{
+  height: 170px;
+  font-family: HelveticaLightItalic, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6B6B6B;
+}
+#openQuotation{
+  position: absolute;
+  margin-top: -14px;
+}
+#closeQuotation{
+  position: absolute;
+  margin: 238px 825px;
+}
+#footer{
+  position: relative;
+  height: 250px;
+  width: 100%;
+  color: #959595;
+  background-color: #373737;
+}
+#menuBar{
+  height: 40px;
+  background-color: #313131;
+}
+#menuFooter{
+  height: 40px;
+  width: 980px;
+  margin: 0px auto; 
+}
+#menuFooter ul{
+  width: 610px;
+  overflow: hidden;
+  margin-left: 35px;
+  padding: 11px 0px;
+  list-style: none;
+}
+#menuFooter li{
+  float: left;
+  border-right: solid 2px #959595;
+}
+#menuFooter li:last-child{
+  border-right: none;
+}
+#menuFooter a{
+  padding: 2px 7px;
+  font-family: HelveticaBold, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  color: #959595;
+}
+#footerLow{
+  width: 980px;
+  margin: 0px auto;
+}
+#slogan{
+  float:left;
+  margin: 35px 40px;
+  font-family: Headline, serif;
+  font-size: 22px;
+  color: #959595;
+}
+#footerLogoPernix{
+  float: left;
+  margin-top: 25px;
+}
+#businessCard{
+  position: absolute;
+  height: 140px;
+  width: 330px;
+  margin: -60px 610px;
+  box-shadow: 0px 25px 25px #2E2E2E;
+  font-family: HelveticaBold, sans-serif;
+  font-weight: bold;
+  color: #959595;
+  background-color: #3E3E3E;
+}
+#telefonos{
+  margin: 30px 0px 0px 30px;
+  font-size: 14px;
+}
+#email{
+  margin: 20px 0px 0px 30px;
+  font-family: Headline, serif;
+  font-size: 20px;
+}
+#bodyBounds{
+  position: relative;
+  height: 100%;
+  width: 980px;
+  margin: 0px auto;
+  padding: 50px;
+}
+.contentBox{
+  position: relative;
+  width: 940px;
+  margin: 10px auto;
+}
+.contentHeader{
+  margin: 10px 0px;
+  font-family: HeadlineWideBold, serif;
+  font-size: 16px;
+  color: #3F88C2;
+}
+.contentBody{
+  overflow: hidden;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: justify;
+  color:  #313131;
+}
+.contentBody ul, ol{
+  margin: 15px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  color:#3F88C2;
+}
+.contentBody li span{
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color:#313131;
+}
+.contentBody a{
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3F88C2;
+}
+.contentBody td{
+  padding: 10px 20px;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.contentBody img{
+  float: left;
+  margin-right: 10px;
+}
+
+

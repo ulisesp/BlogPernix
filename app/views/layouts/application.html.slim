@@ -1,0 +1,39 @@
+DOCTYPE html
+html
+	head
+  	title
+      | Blog - Pernix Solutions 
+  	= stylesheet_link_tag    "application", :media => "all"
+  	= javascript_include_tag "application"
+  	= csrf_meta_tags
+  body
+    #header
+      header#pageHeader
+        section#logoPernix
+          a href='/pages/home'
+            img src="/images/logo.png" alt="Pernix Logo"
+        section#telefonoLogin
+          | 1-313-473-7649
+        section#socialNet
+          div
+            a href='http://www.linkedin.com/company/pernix-solutions'
+              img src="/images/inLogo.png" alt="Linked Logo"
+            | LINKED IN
+          div
+            a href='http://twitter.com/PernixSolutions'
+              img src="/images/twitterLogo.png" alt="Twitter Logo"
+            | TWITTER
+          div
+            a href='https://plus.google.com/b/114450962753002334855/'
+              img src="/images/googlelogo.png.png" alt="Google Plus"
+            | GOOGLE+
+        nav#menuPrincipal
+          ul
+            li = link_to("Costa Rica", "http://www.pernix-solutions.com/pages/costa_rica")
+            li = link_to "Business with us", "/pages/business_with_us"
+            li = link_to("Services", "/pages/services")
+            li = link_to("Projects", "/pages/our_projects")
+            li = link_to("Careers", "/pages/careers")
+            li = link_to("Apprenticeship program", "/pages/apprenticeship_program")
+            li = link_to("About us", "/pages/about")
+    = yield 
