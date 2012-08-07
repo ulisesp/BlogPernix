@@ -6,7 +6,7 @@ html
   	= stylesheet_link_tag    "application", :media => "all"
   	= javascript_include_tag "application"
   	= csrf_meta_tags
-  body
+    body
     #header
       header#pageHeader
         section#logoPernix
@@ -25,7 +25,7 @@ html
             | TWITTER
           div
             a href='https://plus.google.com/b/114450962753002334855/'
-              img src="/images/googlelogo.png.png" alt="Google Plus"
+              img src="/images/googlelogo.png" alt="Google Plus"
             | GOOGLE+
         nav#menuPrincipal
           ul
@@ -37,3 +37,38 @@ html
             li = link_to("Apprenticeship program", "/pages/apprenticeship_program")
             li = link_to("About us", "/pages/about")
     = yield 
+    footer#footer
+      section#menuBar
+        nav#menuFooter
+          ul
+            li = link_to("Costa Rica", "/pages/costa_rica")
+            li = link_to("Business with us", "/pages/business_with_us")
+            li = link_to("Services", "/pages/services")
+            li = link_to("Projects", "/pages/our_projects")
+            li = link_to("Careers", "/pages/careers")
+            li = link_to("Apprenticeship program", "/pages/apprenticeship_program")
+            li = link_to("About us", "/pages/about")
+      section#footerLow
+        section#slogan
+          | Work smart, work with Pernix Solutions
+        section#footerLogoPernix
+          img src="/images/logo.png" alt="Pernix Logo"
+        section#businessCard
+          section#telefonos
+            | USA: +1-313-473-7649
+            br
+            | Costa Rica: +506-2272-3234
+          section#email
+            | info@pernix-solutions.com
+javascript:
+  if ($(window).width() > 980){
+    $("#pageHeader").css("left", ($(window).width()-980)/2);
+    $("#welcomePernix").css("left", ($(window).width()-980)/2);
+  }
+  $(window).resize(function() {
+    if ($(window).width() > 980) {
+      $("#pageHeader").css("left", ($(window).width()-980)/2);
+      $("#welcomePernix").css("left", ($(window).width()-980)/2);
+    }
+    }
+  );
