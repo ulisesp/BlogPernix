@@ -13,7 +13,8 @@ html
           a href='/pages/home'
             img src="/images/logo.png" alt="Pernix Logo"
         section#telefonoLogin
-          | 1-313-473-7649
+          | 1-313-473-7649  |
+          = link_to("Login", "/users/new")
         section#socialNet
           div
             a href='http://www.linkedin.com/company/pernix-solutions'
@@ -37,6 +38,10 @@ html
             li = link_to("Apprenticeship program", "/pages/apprenticeship_program")
             li = link_to("About us", "/pages/about")
     = yield 
+    #loginBox
+      h3
+        | Choose how to login
+      div class="fb-login-button">Login with Facebook
     footer#footer
       section#menuBar
         nav#menuFooter
@@ -61,6 +66,11 @@ html
           section#email
             | info@pernix-solutions.com
 javascript:
+  $("#loginBox").css("display", "none");
+  $("#telefonoLogin a").click(function(e){
+    e.preventDefault();
+    $("#loginBox").dialog();
+  });
   if ($(window).width() > 980){
     $("#pageHeader").css("left", ($(window).width()-980)/2);
     $("#welcomePernix").css("left", ($(window).width()-980)/2);
@@ -72,3 +82,4 @@ javascript:
     }
     }
   );
+
