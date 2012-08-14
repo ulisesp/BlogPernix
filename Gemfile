@@ -11,6 +11,9 @@ gem 'cancan', '~> 1.6'
 gem 'slim', '~> 1.2'
 gem 'cucumber', '~> 1.2'
 gem 'rspec-rails', '~> 2.11'
+
+gem 'twitter-login', '~> 0.4.1', :require => 'twitter/login'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -58,5 +58,8 @@ module BlogPernix
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.twitter_login = Twitter::Login.new \
+      :consumer_key => 'UmKjvLRZgSHTdSa6c77IiA', :secret => 'zGmvIqNj9So4XJQC0atl6OGf1z1UFhaGgIOND0Rr5HY'
   end
 end

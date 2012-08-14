@@ -1,6 +1,11 @@
 BlogPernix::Application.routes.draw do
   resources :users
 
+  twitter = BlogPernix::Application.config.twitter_login
+  twitter_endpoint = twitter.login_handler(:return_to => '/')
+
+  mount twitter_endpoint => 'login/twitter', :as => :login
+
   get "home/index"
 
   # The priority is based upon order of creation:
