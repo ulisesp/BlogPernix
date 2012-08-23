@@ -38,5 +38,14 @@ describe UsersController do
 
       response.should redirect_to(root_path)
     end
+
+    it "stores user id in the session" do
+      request.env['omniauth.auth'] = auth_hash
+
+      post :create
+
+      user = User.last
+      session[:user_id].should == user.id
+    end
   end
 end
