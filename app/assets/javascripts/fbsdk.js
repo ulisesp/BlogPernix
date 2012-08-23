@@ -10,22 +10,9 @@ window.fbAsyncInit = function() {
           });
           // Additional initialization code here
 
-console.log("init");
-
-FB.getLoginStatus(function(response) {
-  console.log(response);
-
-  if (response.status === 'connected') {
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-    console.log("SUCCESS!");
-  } else if (response.status === 'not_authorized') {
-    console.log("NOT AUTHORIZED!");
-  } else {
-    console.log("FAIL!!!");
-  }
- }, true);
-
+          FB.Event.subscribe('auth.statusChange', function(response) {
+           alert('The status of the session is: ' + response.status);
+          });
         };
         // Load the SDK Asynchronously
         (function(d){
