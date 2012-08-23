@@ -15,7 +15,7 @@ html
         - if login?
           section#telefonoLogout
             | 1-313-473-7649  |
-            = link_to("Logout", "sessions/destroy")
+            = link_to("Logout", "sessions/destroy", :method => :delete)
         - else
           section#telefonoLogin
             | 1-313-473-7649  |
