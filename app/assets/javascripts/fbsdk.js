@@ -8,11 +8,6 @@ window.fbAsyncInit = function() {
             logging    : true,
             channelUrl : '//http://fast-wave-7497.herokuapp.com/channel.html'
           });
-          // Additional initialization code here
-
-          FB.Event.subscribe('auth.statusChange', function(response) {
-           alert('The status of the session is: ' + response.status);
-          });
         };
         // Load the SDK Asynchronously
         (function(d){
