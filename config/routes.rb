@@ -1,6 +1,4 @@
 BlogPernix::Application.routes.draw do
-  resources :users
-
   twitter = BlogPernix::Application.config.twitter_login
   twitter_endpoint = twitter.login_handler(:return_to => '/')
 
@@ -8,8 +6,10 @@ BlogPernix::Application.routes.draw do
 
   get "home/index"
 
-  match '/auth/:provider/callback', :to => 'users#create'
-  match '/auth/failure', :to => 'users#failure'
+  match '/auth/:provider/callback', :to => 'sessions#create'
+
+  post 'sessions/create', :to => 'sessions#create'
+  delete 'sessions/destroy', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

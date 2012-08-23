@@ -12,9 +12,14 @@ html
         section#logoPernix
           a href='/pages/home'
             img src="/images/logo.png" alt="Pernix Logo"
-        section#telefonoLogin
-          | 1-313-473-7649  |
-          = session[:user_id].nil? ? link_to("Login", "/users/new") : ""
+        - if login?
+          section#telefonoLogout
+            | 1-313-473-7649  |
+            = link_to("Logout", "sessions/destroy")
+        - else
+          section#telefonoLogin
+            | 1-313-473-7649  |
+            = link_to("Login", "#")
         section#socialNet
           div
             a href='http://www.linkedin.com/company/pernix-solutions'
