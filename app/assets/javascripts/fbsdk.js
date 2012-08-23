@@ -13,13 +13,16 @@ window.fbAsyncInit = function() {
 console.log("init");
 
 FB.getLoginStatus(function(response) {
-  console.log("right here");
+  console.log(response);
 
   if (response.status === 'connected') {
     var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
+    console.log("SUCCESS!");
   } else if (response.status === 'not_authorized') {
+    console.log("NOT AUTHORIZED!");
   } else {
+    console.log("FAIL!!!");
   }
  }, true);
 
