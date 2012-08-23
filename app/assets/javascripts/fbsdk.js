@@ -1,12 +1,28 @@
 window.fbAsyncInit = function() {
           FB.init({
-            appId      : '243443049110744', // App ID
-            channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+            appId      : '276339339133656', // App ID
             status     : true, // check login status
             cookie     : true, // enable cookies to allow the server to access the session
-            xfbml      : true  // parse XFBML
+            xfbml      : true,  // parse XFBML
+            oath       : true,
+            logging    : true,
+            channelUrl : '//http://fast-wave-7497.herokuapp.com/channel.html'
           });
           // Additional initialization code here
+
+console.log("init");
+
+FB.getLoginStatus(function(response) {
+  console.log("right here");
+
+  if (response.status === 'connected') {
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+  } else if (response.status === 'not_authorized') {
+  } else {
+  }
+ }, true);
+
         };
         // Load the SDK Asynchronously
         (function(d){
