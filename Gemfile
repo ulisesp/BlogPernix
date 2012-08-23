@@ -20,6 +20,7 @@ gem 'cucumber', '~> 1.2'
 gem 'rspec-rails', '~> 2.11'
 
 gem 'twitter-login', '~> 0.4.1', :require => 'twitter/login'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.

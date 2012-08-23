@@ -8,6 +8,9 @@ BlogPernix::Application.routes.draw do
 
   get "home/index"
 
+  match '/auth/:provider/callback', :to => 'users#create'
+  match '/auth/failure', :to => 'users#failure'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
